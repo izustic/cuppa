@@ -38,7 +38,7 @@ const Add = () => {
 	return (
 		<>
 			<Tooltip
-				title="Delete"
+				title="Add"
 				sx={{
 					position: "fixed",
 					bottom: 20,

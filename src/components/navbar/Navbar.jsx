@@ -12,7 +12,7 @@ import {
 	styled,
 } from "@mui/material";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)({
 	display: "flex",
@@ -47,24 +47,24 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 
 	return (
 		<AppBar position="sticky">
 			<StyledToolbar>
-      <Typography
-      variant="h6"
-      sx={{
-        display: {
-          xs: "none",
-          sm: "flex", 
-          alignItems: "center", 
-        },
-      }}
-    >
-      <EmojiFoodBeverage sx={{ marginRight: 1 }} />
-      CUPPA
-    </Typography>
+				<Typography
+					variant="h6"
+					sx={{
+						display: {
+							xs: "none",
+							sm: "flex",
+							alignItems: "center",
+						},
+					}}
+				>
+					<EmojiFoodBeverage sx={{ marginRight: 1 }} />
+					CUPPA
+				</Typography>
 				<EmojiFoodBeverage
 					sx={{
 						display: {
@@ -90,10 +90,10 @@ const Navbar = () => {
 							height: "30px",
 						}}
 						src="https://shorturl.at/qwzI0"
-            onClick={e=>setOpen(true)}
+						onClick={(e) => setOpen(true)}
 					/>
 				</Icons>
-				<UserBox onClick={e=>setOpen(true)}>
+				<UserBox onClick={(e) => setOpen(true)}>
 					<Avatar
 						alt="Remy Sharp"
 						sx={{
@@ -101,7 +101,6 @@ const Navbar = () => {
 							height: "30px",
 						}}
 						src="https://shorturl.at/qwzI0"
-            
 					/>
 					<Typography variant="span">Kendrick</Typography>
 				</UserBox>
@@ -110,7 +109,7 @@ const Navbar = () => {
 				id="demo-positioned-menu"
 				aria-labelledby="demo-positioned-button"
 				open={open}
-        onClose={e=>setOpen(false)}
+				onClose={(e) => setOpen(false)}
 				anchorOrigin={{
 					vertical: "top",
 					horizontal: "right",
